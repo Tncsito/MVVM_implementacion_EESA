@@ -15,6 +15,7 @@
                 </StackLayout>
                 <Button Text="Sumar" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding Suymarcommand}" TextTransform="None" Background="white" FontAttributes="Bold" CornerRadius="5" TextColor="Black"/>
                 <Label Text="{Binding R}" TextColor="White" HorizontalOptions="Center" FontAttributes="Bold" FontSize="35" />
+                <Button Text="Ir a página 2" HorizontalOptions="Center" VerticalOptions="Center" CornerRadius="5" BackgroundColor="white" FontAttributes="Bold" Command="{Binding Navegarpagina2command}"/>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

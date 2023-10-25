@@ -35,9 +35,9 @@ namespace MVVM_implementacion_EESA.VistaModelo
         #endregion
 
         #region PROCESOS
-        public async Task Procesoasync()
+        public async Task Navegarpagina2()
         {
-
+            await Navigation.PushAsync(new Vista.Page2());
         }
         public void Sumar()
         {
@@ -63,7 +63,7 @@ namespace MVVM_implementacion_EESA.VistaModelo
         #endregion
 
         #region COMANDOS
-        public ICommand Alertacommand => new Command(async () => await Procesoasync());
+        public ICommand Navegarpagina2command => new Command(async () => await Navegarpagina2());
         public ICommand Suymarcommand => new Command(Sumar);
         #endregion
 
