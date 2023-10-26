@@ -67,7 +67,7 @@ namespace MVVM_implementacion_EESA.VistaModelo
 
         #region COMANDOS
         public ICommand Volvercommand => new Command(async () => await Volver());
-        public ICommand ProcesoSimpcommand => new Command(ProcesoSimple);
+        public ICommand ProcesoSimpcommand => new Command(Mostrarusuarios);
         #endregion
 
     }
