@@ -4,6 +4,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using MVVM_implementacion_EESA.VistaModelo;
+using MVVM_implementacion_EESA.Modelo;
 
 namespace MVVM_implementacion_EESA.VistaModelo
 {
@@ -11,6 +13,7 @@ namespace MVVM_implementacion_EESA.VistaModelo
     {
         #region VARIABLES
         string _Texto;
+        public List<Musuarios> listausuarios { get; set; }
         #endregion
 
         #region CONTRUCTOR
@@ -34,8 +37,31 @@ namespace MVVM_implementacion_EESA.VistaModelo
             await Navigation.PopAsync();
         }
 
-        public void ProcesoSimple()
+        public void Mostrarusuarios()
         {
+            listausuarios = new List<Musuarios>
+                { 
+                    new Musuarios
+                    {
+                        Nombre = "Eduardo",
+                        Imagen = "https://ibb.co/cgCPqg2"
+                    },
+                    new Musuarios
+                    {
+                        Nombre = "Eduardo",
+                        Imagen = "https://ibb.co/cgCPqg2"
+                    },
+                    new Musuarios
+                    {
+                        Nombre = "Eduardo",
+                        Imagen = "https://ibb.co/cgCPqg2"
+                    },
+                    new Musuarios
+                    {
+                        Nombre = "Eduardo",
+                        Imagen = "https://ibb.co/cgCPqg2"
+                    },
+                };
         }
         #endregion
 
