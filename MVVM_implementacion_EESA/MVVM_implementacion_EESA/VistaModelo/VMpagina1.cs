@@ -13,10 +13,24 @@ namespace MVVM_implementacion_EESA.VistaModelo
         string _N1;
         string _N2;
         string _R;
+        string _TipoUsuario;
+        DateTime _Fecha;
+        string _Resultadofecha;
         #endregion
 
         #region OBJETOS
-
+        public string TipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { SetValue(ref _TipoUsuario, value);}
+        }
+        public string SeleccionTipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { SetProperty(ref _TipoUsuario, value); 
+                TipoUsuario = _TipoUsuario;
+            }
+        }
         public string N1
         {
             get { return _N1; }
@@ -31,6 +45,18 @@ namespace MVVM_implementacion_EESA.VistaModelo
         {
             get { return _R; }
             set { SetValue(ref _R, value); }
+        }
+        public DateTime Fecha
+        {
+            get { return _Fecha; }
+            set { SetValue(ref _Fecha, value);
+                Resultadofecha = _Fecha.ToString("dd/MM/yyyy");
+            }
+        }
+        public string Resultadofecha
+        {
+            get { return _Resultadofecha; }
+            set { SetValue(ref _Resultadofecha, value); }
         }
         #endregion
 
@@ -71,6 +97,7 @@ namespace MVVM_implementacion_EESA.VistaModelo
         public VMpagina1(INavigation navigation)
         {
             Navigation = navigation;
+            Fecha = DateTime.Now;
         }
         #endregion
     }
